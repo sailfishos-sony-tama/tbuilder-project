@@ -1,0 +1,3 @@
+[submodule "src/libhybris"]
+	path = src/libhybris
+	url = https://github.com/mer-hybris/libhybris

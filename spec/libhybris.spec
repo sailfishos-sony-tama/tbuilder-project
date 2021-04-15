@@ -1,0 +1,1 @@
+../src/libhybris/rpm/libhybris.spec

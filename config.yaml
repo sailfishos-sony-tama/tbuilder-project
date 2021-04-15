@@ -1,0 +1,15 @@
+project: h8324
+
+targets:
+  - sony-h8324-aarch64
+
+rpms: RPMS
+
+buildoptions: -j6
+
+macros:
+  - sailfishos 4.0
+  - sailfish_build 1
+
+insource:
+  - ALL
