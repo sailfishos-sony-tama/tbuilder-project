@@ -1,0 +1,1 @@
+../src/community-adaptation/rpm/community-adaptation-devel.spec

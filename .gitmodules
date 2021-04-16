@@ -1,3 +1,9 @@
 [submodule "src/libhybris"]
 	path = src/libhybris
 	url = https://github.com/mer-hybris/libhybris
+[submodule "src/droid-config"]
+	path = src/droid-config
+	url = https://github.com/sailfishos-sony-tama/droid-config-sony-tama-pie.git
+[submodule "src/community--adaptation"]
+	path = src/community-adaptation
+	url = https://github.com/sailfishos-sony-tama/community-adaptation.git
