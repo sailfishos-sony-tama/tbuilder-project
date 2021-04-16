@@ -1,7 +1,7 @@
 project: h8324
 
 targets:
-  - sony-h8324-aarch64
+  - SailfishOS-4.0.1.48-aarch64
 
 rpms: RPMS
 
