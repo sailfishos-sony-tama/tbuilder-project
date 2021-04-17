@@ -1,0 +1,1 @@
+../src/pickupd/rpm/pickupd.spec

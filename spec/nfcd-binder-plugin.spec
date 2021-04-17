@@ -1,0 +1,1 @@
+../src/nfcd-binder-plugin/rpm/nfcd-binder-plugin.spec

@@ -1,0 +1,1 @@
+../src/ohm-plugins-misc/rpm/ohm-plugins-misc.spec

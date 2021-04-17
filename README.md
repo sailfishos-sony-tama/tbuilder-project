@@ -16,3 +16,34 @@ Here, the following convention is used:
 
 - packages are added submodules under `src`
 - their SPEC is linked from `spec`
+
+
+## Additional notes
+
+### bluez5
+
+Had to install bluez5 in the snapshot:
+
+```
+sb2 -t SailfishOS-4.0.1.48-aarch64.h8324 -R -msdk-install zypper in bluez5
+```
+
+to be able to compile `bluebinder`.
+
+### hybris EGL
+
+As there is a conflict with Mesa, had to install
+
+```
+sb2 -t SailfishOS-4.0.1.48-aarch64.h8324 -R -msdk-install \
+  zypper -p RPMS/SailfishOS-4.0.1.48-aarch64 in \
+  RPMS/SailfishOS-4.0.1.48-aarch64/libhybris-libEGL-0.0.0-1.aarch64.rpm \
+  RPMS/SailfishOS-4.0.1.48-aarch64/libhybris-libGLESv2-0.0.0-1.aarch64.rpm \
+  RPMS/SailfishOS-4.0.1.48-aarch64/libhybris-libwayland-egl-0.0.0-1.aarch64.rpm
+```
+
+### droid-hal-apollo-img-boot
+
+Cannot build as version is determined from the installed kernel. As it
+is not defined while running `rpmspec`, whole parsing fails. Not sure
+how to approach it.

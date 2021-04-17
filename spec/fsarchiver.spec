@@ -1,0 +1,1 @@
+../src/pkg-fsarchiver/rpm/fsarchiver.spec

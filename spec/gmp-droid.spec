@@ -1,0 +1,1 @@
+../src/gmp-droid/rpm/gmp-droid.spec

@@ -7,3 +7,96 @@
 [submodule "src/community--adaptation"]
 	path = src/community-adaptation
 	url = https://github.com/sailfishos-sony-tama/community-adaptation.git
+[submodule "src/bluebinder"]
+	path = src/bluebinder
+	url = https://github.com/mer-hybris/bluebinder
+[submodule "src/libgbinder"]
+	path = src/libgbinder
+	url = https://github.com/mer-hybris/libgbinder
+[submodule "src/audiosystem-passthrough"]
+	path = src/audiosystem-passthrough
+	url = https://github.com/mer-hybris/audiosystem-passthrough
+[submodule "src/droid-hal-img-boot-sony-tama-pie"]
+	path = src/droid-hal-img-boot-sony-tama-pie
+	url = https://github.com/sailfishos-sony-tama/droid-hal-img-boot-sony-tama-pie
+[submodule "src/dummy_netd"]
+	path = src/dummy_netd
+	url = https://github.com/mer-hybris/dummy_netd
+[submodule "src/geoclue-providers-hybris"]
+	path = src/geoclue-providers-hybris
+	url = https://github.com/mer-hybris/geoclue-providers-hybris
+[submodule "src/gmp-droid"]
+	path = src/gmp-droid
+	url = https://github.com/sailfishos/gmp-droid
+[submodule "src/gst-droid"]
+	path = src/gst-droid
+	url = https://github.com/sailfishos/gst-droid
+[submodule "src/hw-ramdisk"]
+	path = src/hw-ramdisk
+	url = https://github.com/sailfishos/hw-ramdisk
+[submodule "src/initrd-helpers"]
+	path = src/initrd-helpers
+	url = https://github.com/sailfishos/initrd-helpers
+[submodule "src/libdres-ohm"]
+	path = src/libdres-ohm
+	url = https://git.sailfishos.org/mer-core/libdres-ohm
+[submodule "src/libgbinder-radio"]
+	path = src/libgbinder-radio
+	url = https://github.com/mer-hybris/libgbinder-radio
+[submodule "src/libglibutil"]
+	path = src/libglibutil
+	url = https://git.sailfishos.org/mer-core/libglibutil
+[submodule "src/libncicore"]
+	path = src/libncicore
+	url = https://github.com/mer-hybris/libncicore
+[submodule "src/libnciplugin"]
+	path = src/libnciplugin
+	url = https://github.com/mer-hybris/libnciplugin
+[submodule "src/mce-plugin-libhybris"]
+	path = src/mce-plugin-libhybris
+	url = https://github.com/nemomobile/mce-plugin-libhybris
+[submodule "src/nemo-qml-plugin-systemsettings"]
+	path = src/nemo-qml-plugin-systemsettings
+	url = https://github.com/sailfishos-sony-tama/nemo-qml-plugin-systemsettings
+[submodule "src/nfcd"]
+	path = src/nfcd
+	url = https://git.sailfishos.org/mer-core/nfcd
+[submodule "src/nfcd-binder-plugin"]
+	path = src/nfcd-binder-plugin
+	url = https://github.com/mer-hybris/nfcd-binder-plugin
+[submodule "src/ofono-ril-binder-plugin"]
+	path = src/ofono-ril-binder-plugin
+	url = https://github.com/mer-hybris/ofono-ril-binder-plugin
+[submodule "src/ohm"]
+	path = src/ohm
+	url = https://git.sailfishos.org/mer-core/ohm
+[submodule "src/ohm-plugins-misc"]
+	path = src/ohm-plugins-misc
+	url = https://git.sailfishos.org/mer-core/ohm-plugins-misc
+[submodule "src/pickupd"]
+	path = src/pickupd
+	url = https://github.com/sailfishos-sony-tama/pickupd
+[submodule "src/pkg-fsarchiver"]
+	path = src/pkg-fsarchiver
+	url = https://github.com/sailfishos-sony-tama/pkg-fsarchiver
+[submodule "src/pulseaudio-modules-droid"]
+	path = src/pulseaudio-modules-droid
+	url = https://github.com/mer-hybris/pulseaudio-modules-droid
+[submodule "src/pulseaudio-modules-droid-hidl"]
+	path = src/pulseaudio-modules-droid-hidl
+	url = https://github.com/mer-hybris/pulseaudio-modules-droid-hidl
+[submodule "src/qt5-qpa-hwcomposer-plugin"]
+	path = src/qt5-qpa-hwcomposer-plugin
+	url = https://github.com/mer-hybris/qt5-qpa-hwcomposer-plugin
+[submodule "src/qtscenegraph-adaptation"]
+	path = src/qtscenegraph-adaptation
+	url = https://git.sailfishos.org/mer-core/qtscenegraph-adaptation
+[submodule "src/sailfish-connman-plugin-suspend"]
+	path = src/sailfish-connman-plugin-suspend
+	url = https://github.com/mer-hybris/sailfish-connman-plugin-suspend
+[submodule "src/sensorfw"]
+	path = src/sensorfw
+	url = https://github.com/sailfishos-sony-tama/sensorfw
+[submodule "src/yamui"]
+	path = src/yamui
+	url = https://github.com/sailfishos/yamui

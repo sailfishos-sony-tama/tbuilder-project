@@ -1,0 +1,1 @@
+../src/gst-droid/rpm/gst-droid.spec

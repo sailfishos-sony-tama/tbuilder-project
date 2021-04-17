@@ -1,0 +1,1 @@
+../src/nemo-qml-plugin-systemsettings/rpm/nemo-qml-plugin-systemsettings.spec

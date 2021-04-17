@@ -1,0 +1,1 @@
+../src/audiosystem-passthrough/rpm/audiosystem-passthrough.spec

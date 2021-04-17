@@ -1,0 +1,1 @@
+../src/sensorfw/rpm/sensorfw-qt5-hybris.spec

@@ -1,0 +1,1 @@
+../src/qt5-qpa-hwcomposer-plugin/rpm/qt5-qpa-hwcomposer-plugin.spec

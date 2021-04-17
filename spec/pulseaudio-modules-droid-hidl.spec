@@ -1,0 +1,1 @@
+../src/pulseaudio-modules-droid-hidl/rpm/pulseaudio-modules-droid-hidl.spec
