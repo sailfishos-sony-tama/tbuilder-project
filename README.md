@@ -5,27 +5,48 @@ This is a branch for Hybris AOSP10 aarch64 based Sony Tama port.
 This is a repository describing project for building port packages using [TBuilder](https://github.com/rinigus/tbuilder).
 To be able to build the packages:
 
-- create RPMS/`target_name` . For example, RPMS/SailfishOS-4.0.1.48-aarch64. It is recommended to use
-  a "clean" target without droid-hal packages installed, in contrast to the one normally used for porting.
+- create RPMS/`target_name` . For example,
+  RPMS/SailfishOS-4.0.1.48-aarch64. It is recommended to use a "clean"
+  target without droid-hal packages installed, in contrast to the one
+  normally used for porting. Unfortunately, currently some adjustments
+  will be needed, as described below.
 
-- add droid-hal packages to RPMS/`target_name` folder, as done for OBS builds. In addition to droid-hal, you can
-  add other packages that require droid parts, such as droidmedia
-
+- add droid-hal packages to RPMS/`target_name` folder, as done for OBS
+  builds. In addition to droid-hal, you can add other packages that
+  require droid parts, such as droidmedia
 
 Here, the following convention is used:
 
 - packages are added submodules under `src`
 - their SPEC is linked from `spec`
 
+To add new submodules, use `add_repo` script from TBuilder.
+
+To compile, run `tbuilder .` in this directory.
+
 
 ## Additional notes
 
-### bluez5
+Some adjustments of the target were required, induced by conflicts
+with the already installed packages. It is suggested to start with the
+builds and make the adjustments when they fail. This should result in
+the required libhybris packages available for install.
 
-Had to install bluez5 in the snapshot:
+To make adjustments, remove snapshot, as in
 
 ```
-sb2 -t SailfishOS-4.0.1.48-aarch64.h8324 -R -msdk-install zypper in bluez5
+sdk-assistant rm SailfishOS-4.0.1.48-aarch64.h8324
+```
+
+install the required packages and continue building.
+
+
+### bluez5
+
+Had to install bluez5:
+
+```
+sb2 -t SailfishOS-4.0.1.48-aarch64 -R -msdk-install zypper in bluez5
 ```
 
 to be able to compile `bluebinder`.
@@ -35,7 +56,7 @@ to be able to compile `bluebinder`.
 As there is a conflict with Mesa, had to install
 
 ```
-sb2 -t SailfishOS-4.0.1.48-aarch64.h8324 -R -msdk-install \
+sb2 -t SailfishOS-4.0.1.48-aarch64 -R -msdk-install \
   zypper -p RPMS/SailfishOS-4.0.1.48-aarch64 in \
   RPMS/SailfishOS-4.0.1.48-aarch64/libhybris-libEGL-0.0.0-1.aarch64.rpm \
   RPMS/SailfishOS-4.0.1.48-aarch64/libhybris-libGLESv2-0.0.0-1.aarch64.rpm \
