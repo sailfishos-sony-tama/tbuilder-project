@@ -1,1 +1,0 @@
-../src/sensorfw/rpm/sensorfw-qt5.spec
