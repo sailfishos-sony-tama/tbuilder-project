@@ -89,7 +89,7 @@ Problem: ohm-plugin-core-1.2.6-1.2.6.jolla.aarch64 requires ohm = 1.2.6-1.2.6.jo
  Solution 3: break ohm-plugin-core-1.2.6-1.2.6.jolla.aarch64 by ignoring some of its dependencies
 ```
 
-Few build requirements were missing in the SPEC as well:
+Few build requirements were missing in `ohm-plugins-misc.spec` as well:
 ```
 BuildRequires:  automake
 BuildRequires:  libtool
