@@ -1,1 +1,0 @@
-../src/pulseaudio-modules-droid/rpm/pulseaudio-modules-droid-sbj.spec
