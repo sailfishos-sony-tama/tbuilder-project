@@ -63,6 +63,40 @@ sb2 -t SailfishOS-4.0.1.48-aarch64 -R -msdk-install \
   RPMS/SailfishOS-4.0.1.48-aarch64/libhybris-libwayland-egl-0.0.0-1.aarch64.rpm
 ```
 
+### gst-droid
+
+For version 0.20210304.0, `gst-droid` was missing build
+requirement. Add that to its SPEC:
+```
+BuildRequires:  gettext-devel
+```
+
+### ohm
+
+hybris-10 AOSP port requires newer ohm. Unfortunately, compiled
+version cannot be used as
+
+```
+sb2 -t SailfishOS-4.0.1.48-aarch64 -R -msdk-install zypper -p RPMS/SailfishOS-4.0.1.48-aarch64 in RPMS/SailfishOS-4.0.1.48-aarch64/ohm-1.3.0-1.aarch64.rpm
+
+Problem: ohm-plugin-core-1.2.6-1.2.6.jolla.aarch64 requires ohm = 1.2.6-1.2.6.jolla, but this requirement cannot be provided
+ Solution 1: Following actions will be done:
+  install ohm-plugin-core-1.3.0-1.aarch64 (with vendor change)
+    meego  -->   (no vendor) 
+  install droid-config-h8324-policy-settings-1-202104171500.aarch64 (with vendor change)
+    meego  -->  sony
+ Solution 2: do not install ohm-1.3.0-1.aarch64
+ Solution 3: break ohm-plugin-core-1.2.6-1.2.6.jolla.aarch64 by ignoring some of its dependencies
+```
+
+Few build requirements were missing in the SPEC as well:
+```
+BuildRequires:  automake
+BuildRequires:  libtool
+```
+
+after adding those, it compiled without issues.
+
 ### droid-hal-apollo-img-boot
 
 Cannot build as version is determined from the installed kernel. As it
