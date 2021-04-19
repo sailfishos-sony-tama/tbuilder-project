@@ -33,6 +33,8 @@ Few additional packages and conflict resolutions were imposed via
 - droid-hal-apollo-kernel-modules is required to parse boot img SPEC
 - cpio is required for building boot img
 - libhybris is forced instead of mesa GL libs
+- droid-config-h8324 to force vendor change if needed due to the
+  package installed earlier in target with different vendor
 - ohm as hybris-10 AOSP port requires newer ohm. As compiled version has 
   different vendor, resolution has to be enforced
 - automake and libtool: missing in ohm-plugins-misc and libdres

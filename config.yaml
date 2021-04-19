@@ -18,5 +18,6 @@ install:
   - libhybris-libGLESv2
   - libhybris-libwayland-egl
   - libhybris-libEGL
+  - droid-config-h8324
   - automake
   - libtool
