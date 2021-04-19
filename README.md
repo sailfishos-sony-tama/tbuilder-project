@@ -12,7 +12,7 @@ To be able to build the packages:
 
 - add droid-hal packages to RPMS/`target_name` folder, as done for OBS
   builds. In addition to droid-hal, you can add other packages that
-  require droid parts, such as droidmedia
+  require droid parts, such as droidmedia. See below for a list.
 
 Here, the following convention is used:
 
@@ -40,3 +40,23 @@ Few additional packages and conflict resolutions were imposed via
 - automake and libtool: missing in ohm-plugins-misc and libdres
 - gettext-devel missing in gst-droid
 
+
+## Packages included from HADK
+
+These packages were copied from HADK and were used to initiate the
+build:
+
+droid-hal-apollo-0.0.6-202103051839.aarch64.rpm
+droid-hal-apollo-detritus-0.0.6-202103051839.aarch64.rpm
+droid-hal-apollo-devel-0.0.6-202103051839.aarch64.rpm
+droid-hal-apollo-img-dtbo-4.14.220-202103051949.aarch64.rpm
+droid-hal-apollo-kernel-0.0.6-202103051839.aarch64.rpm
+droid-hal-apollo-kernel-dtbo-0.0.6-202103051839.aarch64.rpm
+droid-hal-apollo-kernel-modules-0.0.6-202103051839.aarch64.rpm
+droid-hal-apollo-tools-0.0.6-202103051839.aarch64.rpm
+droid-hal-apollo-users-0.0.6-202103051839.aarch64.rpm
+droidmedia-0.20210203.0-1.aarch64.rpm
+droidmedia-devel-0.20210203.0-1.noarch.rpm
+droid-system-apollo-1-1.aarch64.rpm
+droid-system-apollo-h8324-0.0.1-1.aarch64.rpm
+miniaudiopolicy-0.1.0-202103051923.aarch64.rpm
