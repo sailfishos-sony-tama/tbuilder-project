@@ -12,12 +12,13 @@ macros:
   - sailfish_build 1
 
 install:
-  - bluez5
   - droid-hal-apollo-kernel-modules
   - cpio
   - libhybris-libGLESv2
   - libhybris-libwayland-egl
   - libhybris-libEGL
+  - droid-config-h8324-bluez5
   - droid-config-h8324
+  - ohm
   - automake
   - libtool

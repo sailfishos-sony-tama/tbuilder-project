@@ -29,16 +29,21 @@ To compile, run `tbuilder .` in this directory.
 Few additional packages and conflict resolutions were imposed via
 `install` option in `config.yaml`:
 
-- bluez5 is forced and replaces bluez4 in the target 
 - droid-hal-apollo-kernel-modules is required to parse boot img SPEC
 - cpio is required for building boot img
 - libhybris is forced instead of mesa GL libs
+- droid-config-h8324-bluez5 to force bluez5 support
 - droid-config-h8324 to force vendor change if needed due to the
   package installed earlier in target with different vendor
-- ohm as hybris-10 AOSP port requires newer ohm. As compiled version has 
-  different vendor, resolution has to be enforced
+- ohm as hybris-10 AOSP port requires newer ohm, force install with vendor change
 - automake and libtool: missing in ohm-plugins-misc and libdres
 - gettext-devel missing in gst-droid
+
+For some reason, `cpio` and `m4` (latter pulled by libtool) don't install
+cleanly all the time. You may have to install `cpio`, `libtool` in the 
+target manually and ignore installation errors. 
+See https://forum.sailfishos.org/t/cpio-fails-to-install-in-sdk/5934
+for details.
 
 
 ## Packages included from HADK
@@ -62,3 +67,4 @@ droid-system-apollo-1-1.aarch64.rpm
 droid-system-apollo-h8324-0.0.1-1.aarch64.rpm
 miniaudiopolicy-0.1.0-202103051923.aarch64.rpm
 ```
+
