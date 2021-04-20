@@ -42,7 +42,7 @@ Few additional packages and conflict resolutions were imposed via
 Macros defined in the configuration file are shown as examples, not
 used currently.
 
-### cpio and m4 failing to install
+### Issues with cpio and m4
 
 For some reason, `cpio` and `m4` (latter pulled by libtool) don't install
 cleanly all the time. You may have to install `cpio`, `libtool` in the
@@ -50,7 +50,7 @@ target manually and ignore installation errors.
 See https://forum.sailfishos.org/t/cpio-fails-to-install-in-sdk/5934
 for details.
 
-### issues with droid-hal-xxx-img-boot
+### Issues with droid-hal-xxx-img-boot
 
 Due to the way kernel version is discovered by the packaging script (see
 [droid-hal-device-img-boot.inc](https://github.com/sailfishos-sony-tama/hybris-initrd/blob/f09a111e1f57f795d47b6f3402cf2c83ae1d2b3f/droid-hal-device-img-boot.inc#L48)),
