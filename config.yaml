@@ -22,3 +22,4 @@ install:
   - ohm
   - automake
   - libtool
+  - gettext-devel
