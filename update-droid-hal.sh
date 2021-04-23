@@ -24,8 +24,9 @@ mkdir -p RPMS/$sfos_target/
 
 for files in \
     droid-hal-$device/droid-hal \
-	droid-hal-img-dtbo-sony-tama-pie/droid-hal-apollo-img-dtbo \
-	miniaudiopolicy/miniaudiopolicy
+	droid-hal-img-dtbo-sony-tama-pie/droid-hal-*-img-dtbo \
+	miniaudiopolicy/miniaudiopolicy \
+	droid-system-sony-pie-template/droid-system
 do
     rsync -av $ANDROID_ROOT/droid-local-repo/${device}/${files}* RPMS/$sfos_target/
 done
