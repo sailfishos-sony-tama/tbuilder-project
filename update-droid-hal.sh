@@ -24,6 +24,7 @@ mkdir -p RPMS/$sfos_target/
 
 for files in \
     droid-hal-$device/droid-hal \
+	droidmedia-localbuild/droidmedia \
 	droid-hal-img-dtbo-sony-tama-pie/droid-hal-*-img-dtbo \
 	miniaudiopolicy/miniaudiopolicy \
 	droid-system-sony-pie-template/droid-system
