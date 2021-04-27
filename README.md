@@ -21,6 +21,12 @@ Here, the following convention is used:
 
 To add new submodules, use `add_repo` script from TBuilder.
 
+To pull droid packages from local build, run, in PlatformSDK, within
+this project directory:
+```
+./update-droid-hal.sh SailfishOS-4.0.1.48-aarch64
+```
+
 To compile, run `tbuilder .` in this directory.
 
 
