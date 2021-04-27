@@ -24,23 +24,64 @@ To add new submodules, use `add_repo` script from TBuilder.
 To compile, run `tbuilder .` in this directory.
 
 
-## Additional notes
+## Notes
+
+For this build to work, there are some adjustments needed in the
+target. Below, used `config.yaml` options are explained and how to
+prepare the target for building.
+
+Read the text below first before making changes, as some issues could
+be encountered which are explained below.
+
+### config.yaml
 
 Few additional packages and conflict resolutions were imposed via
 `install` option in `config.yaml`:
 
-- droid-hal-apollo-kernel-modules is required to parse boot img SPEC
-- cpio is required for building boot img
+- droid-hal-apollo-devel to ensure that at least one of the devel
+  packages is installed and there are no conflicts with similar
+  packages from other Tama devices (we have 3 of these packages
+  in this port). Otherwise, it wouldn't be needed.
+- droid-hal-*-kernel-modules are required to parse boot img SPEC
 - libhybris is forced instead of mesa GL libs
-- droid-config-h8324-bluez5 to force bluez5 support
-- droid-config-h8324 to force vendor change if needed due to the
-  package installed earlier in target with different vendor
+- bluez5 to force bluez5 support
 - ohm as hybris-10 AOSP port requires newer ohm, force install with vendor change
-- automake and libtool: missing in ohm-plugins-misc and libdres
-- gettext-devel missing in gst-droid
 
 Macros defined in the configuration file are shown as examples, not
 used currently.
+
+### Preparing target
+
+There are few changes that have to be done in the target to make the
+build working.
+
+Install few packages (change target as needed):
+
+```
+sb2 -t SailfishOS-4.0.1.48-aarch64 -R zypper in cpio automake libtool gettext-devel
+```
+
+Those packages are either missing from dependencies:
+
+- automake and libtool: missing in ohm-plugins-misc and libdres
+- gettext-devel missing in gst-droid
+
+or are in conflict with installed version (`cpio`). See below for
+description of issues.
+
+Next, allow to change vendor of the packages while installing by
+zypper. This is needed when providing packages within the project that
+are also available in the target already. These include `ohm` in this
+project, but also `droid-config-xxx` which provides some symbols that
+will replace the system-provided ones.
+
+To make it possible, change `/etc/zypp/zypp.conf` to allow vendor
+change by setting `solver.allowVendorChange = true` in it. Use your
+preferred editor for it as in
+```
+sb2 -t SailfishOS-4.0.1.48-aarch64 -R nano /etc/zypp/zypp.conf
+```
+
 
 ### Issues with cpio and m4
 
@@ -51,6 +92,9 @@ See https://forum.sailfishos.org/t/cpio-fails-to-install-in-sdk/5934
 for details.
 
 ### Issues with droid-hal-xxx-img-boot
+
+Haven't observed it recently, keeping the text describing the issue
+for reference.
 
 Due to the way kernel version is discovered by the packaging script (see
 [droid-hal-device-img-boot.inc](https://github.com/sailfishos-sony-tama/hybris-initrd/blob/f09a111e1f57f795d47b6f3402cf2c83ae1d2b3f/droid-hal-device-img-boot.inc#L48)),
