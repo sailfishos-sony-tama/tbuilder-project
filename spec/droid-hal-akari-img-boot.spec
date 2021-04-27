@@ -1,0 +1,1 @@
+../src/droid-hal-img-boot-sony-tama-pie/rpm/droid-hal-akari-img-boot.spec

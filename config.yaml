@@ -1,4 +1,4 @@
-project: h8324
+project: tama
 
 targets:
   - SailfishOS-4.0.1.48-aarch64
@@ -9,17 +9,16 @@ buildoptions: -j6
 
 macros:
   - sailfishos 4.0
-  - sailfish_build 1
 
 install:
+  - droid-hal-apollo-devel
+  - droid-hal-akari-kernel-modules
   - droid-hal-apollo-kernel-modules
   - cpio
   - libhybris-libGLESv2
   - libhybris-libwayland-egl
   - libhybris-libEGL
-  - droid-config-h8324-bluez5
-  - droid-config-h8324
-  - ohm
+  - bluez5
   - automake
   - libtool
   - gettext-devel
