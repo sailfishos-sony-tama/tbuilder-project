@@ -16,7 +16,5 @@ macros:
 
 install:
   - droid-hal-apollo-devel
-  - droid-hal-akari-kernel-modules
-  - droid-hal-apollo-kernel-modules
   - libhybris-libGLESv2 libhybris-libwayland-egl libhybris-libEGL
   - bluez5
