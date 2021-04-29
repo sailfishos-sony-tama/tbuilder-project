@@ -5,16 +5,18 @@ targets:
 
 rpms: RPMS
 
+options:
+  - allow-vendor-change
+
 buildoptions: -j6
 
 macros:
+  - vendor meego
   - sailfishos 4.0
 
 install:
   - droid-hal-apollo-devel
   - droid-hal-akari-kernel-modules
   - droid-hal-apollo-kernel-modules
-  - libhybris-libGLESv2
-  - libhybris-libwayland-egl
-  - libhybris-libEGL
+  - libhybris-libGLESv2 libhybris-libwayland-egl libhybris-libEGL
   - bluez5

@@ -51,10 +51,14 @@ Few additional packages and conflict resolutions were imposed via
 - droid-hal-*-kernel-modules are required to parse boot img SPEC
 - libhybris is forced instead of mesa GL libs
 - bluez5 to force bluez5 support
-- ohm as hybris-10 AOSP port requires newer ohm, force install with vendor change
 
-Macros defined in the configuration file are shown as examples, not
-used currently.
+Out of options, `allow-vendor-change` is used to work around an issue
+with installation of build requirements for `droid-hal-version-XXXX`
+packages
+([details](https://forum.sailfishos.org/t/mb2-allow-to-install-dependencies-with-vendor-change/6057/4)).
+
+Macros defined in the configuration file are consistent with OBS
+settings (definition of vendor) or shown as an exmaple (sailfishos).
 
 ### Preparing target
 
@@ -75,19 +79,6 @@ Those packages are either missing from dependencies:
 or are in conflict with installed version (`cpio`). See below for
 description of issues.
 
-Next, allow to change vendor of the packages while installing by
-zypper. This is needed when providing packages within the project that
-are also available in the target already. These include `ohm` in this
-project, but also `droid-config-xxx` which provides some symbols that
-will replace the system-provided ones.
-
-To make it possible, change `/etc/zypp/zypp.conf` to allow vendor
-change by setting `solver.allowVendorChange = true` in it. Use your
-preferred editor for it as in
-```
-sb2 -t SailfishOS-4.0.1.48-aarch64 -R nano /etc/zypp/zypp.conf
-```
-
 
 ### Issues with cpio and m4
 
@@ -96,37 +87,6 @@ cleanly all the time. You may have to install `cpio`, `libtool` in the
 target manually and ignore installation errors.
 See https://forum.sailfishos.org/t/cpio-fails-to-install-in-sdk/5934
 for details.
-
-### Issues with droid-hal-xxx-img-boot
-
-Haven't observed it recently, keeping the text describing the issue
-for reference.
-
-Due to the way kernel version is discovered by the packaging script (see
-[droid-hal-device-img-boot.inc](https://github.com/sailfishos-sony-tama/hybris-initrd/blob/f09a111e1f57f795d47b6f3402cf2c83ae1d2b3f/droid-hal-device-img-boot.inc#L48)),
-we have to have droid-hal-apollo-kernel-modules installed in the target
-to be able to process SPEC as well as build it. While parsing is taken care
-by forcing install of droid-hal-xxx-kernel-modules, as specified in `config.yaml`,
-there is an issue during building which is exposed if droid-hal-xxx-img-boot is
-available in the repositories during building it's new version.
-
-Namely, droid-hal-xxx-img-boot is also providing
-droid-hal-xxx-kernel-modules. In localbuild setup, we have
-droid-hal-xxx-kernel-modules, as separate package, with the version
-that is smaller than the version provided by
-droid-hal-xxx-img-boot. For example, in my current build:
-
-```
-droid-hal-apollo-kernel-modules-0.0.6-202103051839.aarch64.rpm
-droid-hal-apollo-img-boot-4.14.220-1.aarch64.rpm
-```
-
-So, as soon as droid-hal-apollo-img-boot build starts, it pulls newer
-droid-hal-apollo-kernel-modules and fails to build as `Version`
-handling fails.
-
-As a workaround, delete droid-hal-xxx-img-boot packages before
-rebuilding them.
 
 
 ## Packages included from HADK
