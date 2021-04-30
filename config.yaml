@@ -18,3 +18,11 @@ install:
   - droid-hal-apollo-devel
   - libhybris-libGLESv2 libhybris-libwayland-egl libhybris-libEGL
   - bluez5
+
+skip_rpms:
+  - patterns-sailfish-device-configuration
+  - droid-hal-version
+  - .*-bluez4-
+  - .*-kickstart-configuration-
+  - droid-hal-akari-devel
+  - droid-hal-akatsuki-devel
