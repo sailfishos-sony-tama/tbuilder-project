@@ -103,3 +103,6 @@
 [submodule "src/initrd-logos-sailfish"]
 	path = src/initrd-logos-sailfish
 	url = https://github.com/mer-hybris/initrd-logos-sailfish
+[submodule "src/droid-hal-img-dtbo-sony-tama-pie"]
+	path = src/droid-hal-img-dtbo-sony-tama-pie
+	url = https://github.com/sailfishos-sony-tama/droid-hal-img-dtbo-sony-tama-pie

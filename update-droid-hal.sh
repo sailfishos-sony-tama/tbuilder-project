@@ -27,11 +27,24 @@ sync_type() {
     mkdir -p RPMS/$sfos_target/
     for files in \
 	droid-hal-*/droid-hal \
-	    droid-hal-img-dtbo-sony-tama-pie/droid-hal-*-img-dtbo \
 	    droid-system-sony-pie-template/droid-system
     do
 	rsync -av $ANDROID_ROOT/droid-local-repo/$device/${files}* RPMS/$sfos_target/
     done
+
+    RSYNC_DTBO=$(rsync -aEim --no-R --no-implied-dirs $ANDROID_ROOT/out/target/product/$fam/dtbo.img src/droid-hal-img-dtbo-sony-tama-pie/dtbo-$fam.img)
+    if [ $? -eq 0 ]; then
+	if [ -n "${RSYNC_DTBO}" ]; then
+	    echo DTBO updated for $fam
+	    touch src/droid-hal-img-dtbo-sony-tama-pie/rpm/droid-hal-$fam-img-dtbo.spec
+	else
+	    # No changes were made by rsync
+	    echo DTBO not changed
+	fi
+    else
+	echo Error while updating DTBO
+	exit 1
+    fi
 }
 
 sync_dev() {

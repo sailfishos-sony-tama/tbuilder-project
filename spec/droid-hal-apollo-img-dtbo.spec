@@ -1,0 +1,1 @@
+../src/droid-hal-img-dtbo-sony-tama-pie/rpm/droid-hal-apollo-img-dtbo.spec
