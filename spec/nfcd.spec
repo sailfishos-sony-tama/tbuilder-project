@@ -1,1 +1,0 @@
-../src/nfcd/rpm/nfcd.spec

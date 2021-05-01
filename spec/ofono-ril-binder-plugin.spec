@@ -1,1 +1,0 @@
-../src/ofono-ril-binder-plugin/rpm/ofono-ril-binder-plugin.spec

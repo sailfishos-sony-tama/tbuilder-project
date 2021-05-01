@@ -1,1 +1,0 @@
-../src/libncicore/rpm/libncicore.spec

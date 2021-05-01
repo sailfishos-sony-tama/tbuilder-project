@@ -1,1 +1,0 @@
-../src/qtscenegraph-adaptation/rpm/qtscenegraph-adaptation-droid.spec

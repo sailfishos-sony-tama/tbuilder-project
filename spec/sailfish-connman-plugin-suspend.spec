@@ -1,1 +1,0 @@
-../src/sailfish-connman-plugin-suspend/rpm/sailfish-connman-plugin-suspend.spec

@@ -1,1 +1,0 @@
-../src/dummy_netd/rpm/dummy_netd.spec

@@ -1,1 +1,0 @@
-../src/libgbinder/rpm/libgbinder.spec

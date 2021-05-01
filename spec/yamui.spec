@@ -1,1 +1,0 @@
-../src/yamui/rpm/yamui.spec
