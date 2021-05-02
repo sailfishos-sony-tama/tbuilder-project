@@ -1,0 +1,1 @@
+../src/initrd-helpers/rpm/initrd-helpers.spec

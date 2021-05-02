@@ -1,0 +1,1 @@
+../src/initrd-logos-sailfish/rpm/initrd-logos-sailfish.spec

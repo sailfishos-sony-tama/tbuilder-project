@@ -1,0 +1,1 @@
+../src/libglibutil/rpm/libglibutil.spec
