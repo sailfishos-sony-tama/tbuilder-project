@@ -66,9 +66,6 @@ sync_dev apollo h8324
 sync_type akari h8216
 sync_dev akari h8216
 
-# sync common
-mkdir -p common/RPMS/$sfos_target/
-
 for files in \
     miniaudiopolicy/miniaudiopolicy \
     droidmedia-localbuild/droidmedia
