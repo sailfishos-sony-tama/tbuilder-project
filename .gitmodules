@@ -106,3 +106,9 @@
 [submodule "src/droid-hal-img-dtbo-sony-tama-pie"]
 	path = src/droid-hal-img-dtbo-sony-tama-pie
 	url = https://github.com/sailfishos-sony-tama/droid-hal-img-dtbo-sony-tama-pie
+[submodule "src/sailfish-fpd-community-test.git"]
+	path = src/sailfish-fpd-community-test.git
+	url = https://github.com/piggz/sailfish-fpd-community-test.git
+[submodule "src/sailfish-fpd-community.git"]
+	path = src/sailfish-fpd-community.git
+	url = https://github.com/piggz/sailfish-fpd-community.git

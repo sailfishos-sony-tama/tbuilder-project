@@ -1,0 +1,1 @@
+../src/sailfish-fpd-community.git/rpm/sailfish-fpd-community.spec
