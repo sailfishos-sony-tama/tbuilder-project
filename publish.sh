@@ -5,7 +5,7 @@
 set -e
 
 # generate index.html used to show overview page
-tree -h -T "Sailfish OS Packages for Sony Tama" --noreport -D -L 2 -F --dirsfirst -P "*.rpm" -H RPMS RPMS > RPMS/index.html
+(cd RPMS && tree -h -T "Sailfish OS Packages for Sony Tama" --noreport -D -L 2 -F --dirsfirst -P "*.rpm" -H . . > index.html)
 # default error page
 echo "Error, file or directory not found or not accessible via this URL" > RPMS/error.txt
 
