@@ -107,11 +107,11 @@
 	path = src/droid-hal-img-dtbo-sony-tama-pie
 	url = https://github.com/sailfishos-sony-tama/droid-hal-img-dtbo-sony-tama-pie
 [submodule "src/sailfish-fpd-community-test.git"]
-	path = src/sailfish-fpd-community-test.git
+	path = src/sailfish-fpd-community-test
 	url = https://github.com/piggz/sailfish-fpd-community-test.git
 [submodule "src/sailfish-fpd-community.git"]
-	path = src/sailfish-fpd-community.git
+	path = src/sailfish-fpd-community
 	url = https://github.com/piggz/sailfish-fpd-community.git
 [submodule "src/libtrace-ohm.git"]
-	path = src/libtrace-ohm.git
+	path = src/libtrace-ohm
 	url = https://git.sailfishos.org/mer-core/libtrace-ohm.git

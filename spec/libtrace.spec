@@ -1,1 +1,1 @@
-../src/libtrace-ohm.git/rpm/libtrace.spec
+../src/libtrace-ohm/rpm/libtrace.spec

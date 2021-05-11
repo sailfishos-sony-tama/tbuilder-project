@@ -1,1 +1,1 @@
-../src/sailfish-fpd-community-test.git/rpm/sailfish-fpd-community-test.spec
+../src/sailfish-fpd-community-test/rpm/sailfish-fpd-community-test.spec
