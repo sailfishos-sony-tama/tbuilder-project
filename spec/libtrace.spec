@@ -1,1 +1,0 @@
-../src/libtrace-ohm/rpm/libtrace.spec

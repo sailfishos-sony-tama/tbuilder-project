@@ -34,15 +34,9 @@
 [submodule "src/initrd-helpers"]
 	path = src/initrd-helpers
 	url = https://github.com/sailfishos/initrd-helpers
-[submodule "src/libdres-ohm"]
-	path = src/libdres-ohm
-	url = https://git.sailfishos.org/mer-core/libdres-ohm
 [submodule "src/libgbinder-radio"]
 	path = src/libgbinder-radio
 	url = https://github.com/mer-hybris/libgbinder-radio
-[submodule "src/libglibutil"]
-	path = src/libglibutil
-	url = https://git.sailfishos.org/mer-core/libglibutil
 [submodule "src/libncicore"]
 	path = src/libncicore
 	url = https://github.com/mer-hybris/libncicore
@@ -64,12 +58,6 @@
 [submodule "src/ofono-ril-binder-plugin"]
 	path = src/ofono-ril-binder-plugin
 	url = https://github.com/mer-hybris/ofono-ril-binder-plugin
-[submodule "src/ohm"]
-	path = src/ohm
-	url = https://git.sailfishos.org/mer-core/ohm
-[submodule "src/ohm-plugins-misc"]
-	path = src/ohm-plugins-misc
-	url = https://git.sailfishos.org/mer-core/ohm-plugins-misc
 [submodule "src/pickupd"]
 	path = src/pickupd
 	url = https://github.com/sailfishos-sony-tama/pickupd
@@ -112,6 +100,3 @@
 [submodule "src/sailfish-fpd-community.git"]
 	path = src/sailfish-fpd-community
 	url = https://github.com/piggz/sailfish-fpd-community.git
-[submodule "src/libtrace-ohm.git"]
-	path = src/libtrace-ohm
-	url = https://git.sailfishos.org/mer-core/libtrace-ohm.git

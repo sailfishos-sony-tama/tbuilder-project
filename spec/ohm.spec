@@ -1,1 +1,0 @@
-../src/ohm/rpm/ohm.spec
