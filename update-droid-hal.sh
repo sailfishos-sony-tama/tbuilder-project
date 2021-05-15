@@ -68,7 +68,8 @@ sync_dev akari h8216
 
 for files in \
     miniaudiopolicy/miniaudiopolicy \
-    droidmedia-localbuild/droidmedia
+    droidmedia-localbuild/droidmedia \
+    sailfish-fpd-community/droid-biometry-fp
 do
     rsync -av $ANDROID_ROOT/droid-local-repo/$main_device/${files}* RPMS/$sfos_target/
 done
