@@ -1,7 +1,7 @@
 project: tama
 
 targets:
-  - SailfishOS-4.1.0.23-aarch64
+  - SailfishOS-4.1.0.24-aarch64
 
 rpms: RPMS
 
