@@ -13,6 +13,7 @@ buildoptions: -j6
 macros:
   - vendor meego
   - sailfishos 4.0
+  - _buildhost tbuilder
 
 install:
   - droid-hal-apollo-devel
