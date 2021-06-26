@@ -63,8 +63,14 @@ sync_dev() {
 sync_type apollo h8324
 sync_dev apollo h8314
 sync_dev apollo h8324
+
 sync_type akari h8216
 sync_dev akari h8216
+sync_dev akari h8266
+
+sync_type akatsuki h8416
+sync_dev akatsuki h8416
+sync_dev akatsuki h9436
 
 for files in \
     miniaudiopolicy/miniaudiopolicy \
