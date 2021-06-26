@@ -1,0 +1,1 @@
+../src/droid-config/rpm/patterns-sailfish-device-configuration-h9436.spec

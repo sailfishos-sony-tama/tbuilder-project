@@ -1,0 +1,1 @@
+../src/droid-config/rpm/droid-config-h8416.spec
