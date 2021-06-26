@@ -27,3 +27,4 @@ skip_rpms:
   - .*-kickstart-configuration-
   - droid-hal-akari-devel
   - droid-hal-akatsuki-devel
+  - nemo-qml-plugin-systemsettings
