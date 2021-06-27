@@ -32,7 +32,7 @@ sync_type() {
 	rsync -av $ANDROID_ROOT/droid-local-repo/$device/${files}* RPMS/$sfos_target/
     done
 
-    RSYNC_DTBO=$(rsync -aEim --no-R --no-implied-dirs $ANDROID_ROOT/out/target/product/$fam/dtbo.img src/droid-hal-img-dtbo-sony-tama-pie/dtbo-$fam.img)
+    RSYNC_DTBO=$(rsync -aEim --no-R --no-implied-dirs $ANDROID_ROOT/kernel/sony/msm-4.14/common-kernel/dtbo-$fam.img src/droid-hal-img-dtbo-sony-tama-pie/dtbo-$fam.img)
     if [ $? -eq 0 ]; then
 	if [ -n "${RSYNC_DTBO}" ]; then
 	    echo DTBO updated for $fam
@@ -79,3 +79,11 @@ for files in \
 do
     rsync -av $ANDROID_ROOT/droid-local-repo/$main_device/${files}* RPMS/$sfos_target/
 done
+
+# droid fake crypt needed by akatsuki
+for files in \
+    sailfish-fpd-community/droid-fake-crypt
+do
+    rsync -av $ANDROID_ROOT/droid-local-repo/h8416/${files}* RPMS/$sfos_target/
+done
+
