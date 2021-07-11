@@ -102,4 +102,4 @@
 	url = https://github.com/piggz/sailfish-fpd-community.git
 [submodule "src/zgovernor"]
 	path = src/zgovernor
-	url = https://github.com/rinigus/zgovernor
+	url = https://github.com/sailfishos-sony-tama/zgovernor
