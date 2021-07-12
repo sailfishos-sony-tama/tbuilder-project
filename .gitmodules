@@ -103,3 +103,6 @@
 [submodule "src/zgovernor"]
 	path = src/zgovernor
 	url = https://github.com/sailfishos-sony-tama/zgovernor
+[submodule "src/community-adaptation"]
+	path = src/community-adaptation
+	url = https://github.com/sailfishos-sony-tama/community-adaptation
